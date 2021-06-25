@@ -1,6 +1,6 @@
 # Build output.
 target/
-
+.DS_Store
 # IntelliJ project files.
 .idea/
 *.iml
