@@ -82,7 +82,7 @@ public class CloudBuildClientTest {
   private CloudBuildClient cloudBuild(Run run) {
     return new CloudBuildClient(
         new CloudBuild.Builder(transport, json, req -> {})
-            .setRootUrl("https://cloudbuild.googleapis.com/")
+            .setRootUrl("https://europe-west1-cloudbuild.googleapis.com/")
             .setApplicationName("google-cloudbuild-plugin-test")
             .build(),
         "test-project", run, TaskListener.NULL);

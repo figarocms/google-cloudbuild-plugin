@@ -32,7 +32,7 @@ import hudson.model.TaskListener;
 
 /** Creates clients for communicating with Google APIs. */
 public class ClientFactory {
-  public static final String APPLICATION_NAME = "cloud-build-plugin";
+  public static final String APPLICATION_NAME = "cloud-build-plugin-custom";
 
   private static HttpTransport DEFAULT_TRANSPORT;
 
@@ -90,7 +90,7 @@ public class ClientFactory {
   public CloudBuildClient cloudBuild() {
     return new CloudBuildClient(
         new CloudBuild.Builder(transport, jsonFactory, gcred)
-            .setRootUrl("https://cloudbuild.googleapis.com/")
+            .setRootUrl("https://europe-west1-cloudbuild.googleapis.com/")
             .setApplicationName(APPLICATION_NAME)
             .build(),
         credentials.getProjectId(), run, listener);
